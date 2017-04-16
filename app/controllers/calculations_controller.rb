@@ -112,7 +112,7 @@ end
 
     @mean = (@numbers.sum)/(@numbers.count)
 
-    @variance = @numbers.inject(0.0) {|s,x| s + (x - @mean)**2}
+    @variance = (@numbers.inject(0.0) {|s,x| s + (x - @mean)**2})/@count
 
     @standard_deviation = Math.sqrt(@variance)
 
